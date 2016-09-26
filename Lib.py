@@ -85,7 +85,7 @@ def awesometotient(L): #totient sieve
 	return ret
 
 def besieve(L): # {base:exponent, ...} prime factorization sieve
-	arr = [None, None] + range(2, L+1)
+	arr = [dict(), dict()] + range(2, L+1)
 	for x in xrange(2, L+1):
 		if isinstance(arr[x], int):
 			arr[x] = {x:1}
