@@ -257,10 +257,11 @@ def befacs(d): #number of factors of a number
 
 @bedecorate
 def befaclist(d): #list of factors of a number
-	p = d.keys()
-	k = d.values()
-	for e in incgen(k):
-		yield bearrmul(p, e)
+	if d:
+		p = d.keys()
+		k = d.values()
+		for e in incgen(k):
+			yield bearrmul(p, e)
 
 @bedecorate
 def beppwrs(d): #list of prime power factors of a number
@@ -302,6 +303,12 @@ def xcount(arg1, arg2=None, step=None): #like xrange, but accepts floats
 		yield start
 		start += step
 
+def factorial(n):
+	if n <= 1:
+		return 1
+	else:
+		return reduce(mul, xrange(1, n+1))
+
 '''recursive'''
 
 def memoize(fun): #duh
@@ -333,6 +340,12 @@ def jack(n, p, e): #p**e if p**e < n else 0
 	else:
 		ret = jack(n, p, e>>1)**2
 	return 0 if n < ret else ret
+
+def binarySearch(e, arr, start=0, stop=None):
+	if stop is None:
+		stop = len(arr)-1
+	mid = start + stop >> 1
+
 
 '''diophantine'''
 
