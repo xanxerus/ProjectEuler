@@ -346,6 +346,43 @@ def binarySearch(e, arr, start=0, stop=None):
 		stop = len(arr)-1
 	mid = start + stop >> 1
 
+#yield permutations of length L in lexicographic order
+def ordperm(digits='123456789', L=None):
+	if L is None:
+		L = len(digits)
+
+	if L == 0 or not digits:
+		yield ''
+	else:
+		for x in xrange(len(digits)):
+			for s in ordperm(digits[:x] + digits[x+1:], L-1):
+				yield digits[x] + s
+
+#yield all permutations of all lengths in order
+def allperm(digits='123456789'):
+	for size in xrange(1, len(digits)+1):
+		for p in ordperm(digits, size):
+			yield p
+
+#yield all combinations in lexicographic order
+def ordcomb(digits='123456789', L=None):
+	if L is None:
+		L = len(digits)
+
+	if L == 0 or not digits:
+		yield ''
+	else:
+		for x in xrange(len(digits)):
+			for s in ordcomb(digits, L-1):
+				yield digits[x] + s
+
+#yield all combinations of all lengths form 1 to L in order
+def allcomb(digits='123456789', L=None):
+	for size in xrange(1, len(digits)+1 if L is None else L+1):
+		for p in ordcomb(digits, size):
+			yield p
+
+
 
 '''diophantine'''
 
