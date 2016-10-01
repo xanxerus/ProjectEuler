@@ -359,8 +359,14 @@ def ordperm(digits='123456789', L=None):
 				yield digits[x] + s
 
 #yield all permutations of all lengths in order
-def allperm(digits='123456789'):
-	for size in xrange(1, len(digits)+1):
+def allperm(digits='123456789', reverse=False):
+	it = xrange(1, len(digits)+1)
+
+	if reverse:
+		digits = digits[::-1]
+		it = reversed(it)
+	
+	for size in it:
 		for p in ordperm(digits, size):
 			yield p
 
