@@ -379,7 +379,7 @@ def ordcomb(digits='123456789', L=None):
 		yield ''
 	else:
 		for x in xrange(len(digits)):
-			for s in ordcomb(digits, L-1):
+			for s in ordcomb(digits[x:], L-1):
 				yield digits[x] + s
 
 #yield all combinations of all lengths form 1 to L in order
