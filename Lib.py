@@ -388,8 +388,6 @@ def allcomb(digits='123456789', L=None):
 		for p in ordcomb(digits, size):
 			yield p
 
-
-
 '''diophantine'''
 
 def eea(a, b, c=1, verbose=False): #euclidean algorithm: solve ax + by = c
@@ -456,3 +454,16 @@ def pellsolutions(n, c=1): #infinitely many solutions to y^2 - D*x^2 == c
 	while True:
 		yield xk, yk
 		xk, yk = x1*xk + n*y1*yk, x1*yk + y1*xk
+
+'''trivial'''
+def quad(a, b, c):
+	d = b*b - 4*a*c
+	if d == 0:
+		return (-b+sqrt(d))/(2*a),
+	elif d > 0:
+		return (-b+sqrt(d))/(2*a), (-b-sqrt(d))/(2*a)
+	else:
+		return tuple()
+
+def isint(n):
+	return n == int(n)
