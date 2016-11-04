@@ -8,6 +8,6 @@ Here are which folders contain which problems:
 
 ###Easy: 
 * 1-53
-* 55-56
+* 55-59
 * 67
 * 96
