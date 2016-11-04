@@ -9,3 +9,4 @@ Here are which folders contain which problems:
 ###Easy: 
 * 1-50
 * 67
+* 96
