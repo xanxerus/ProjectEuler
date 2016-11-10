@@ -11,3 +11,6 @@ Here are which folders contain which problems:
 * 55-59
 * 67
 * 96
+
+###Fun:
+* 256
