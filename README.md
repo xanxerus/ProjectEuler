@@ -14,3 +14,4 @@ Here are which folders contain which problems:
 
 ###Fun:
 * 256
+* 531
