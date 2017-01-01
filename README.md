@@ -8,7 +8,7 @@ Here are which folders contain which problems:
 
 ###Easy: 
 * 1-53
-* 55-59
+* 55-63
 * 67
 * 96
 
