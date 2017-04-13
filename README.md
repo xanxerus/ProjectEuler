@@ -9,6 +9,9 @@ Here are which folders contain which problems:
 ###Easy: 
 * 1-67 except 54
 * 96
+* 345
+* 381
+* 504
 * 587
 
 ###Fun:
