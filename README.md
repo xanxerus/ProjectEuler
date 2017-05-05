@@ -11,8 +11,15 @@ Here are which folders contain which problems:
 * 96
 * 345
 * 381
+* 301
+* 315
+* 323
+* 401
+* 429
+* 491
 * 504
 * 587
+* 599
 
 ###Fun:
 * 256
