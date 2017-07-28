@@ -20,8 +20,11 @@ Here are which folders contain which problems:
 * 504
 * 587
 * 599
+* 601
 
 ###Fun:
 * 256
 * 531
 * 590
+* 604
+* 605
